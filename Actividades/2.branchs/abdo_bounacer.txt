@@ -1,0 +1,20 @@
+¿Qué es un branch?
+Una rama donde puedes trabajar sin afectar el resto del proyecto.
+¿Por qué pueden ser útiles los branches?
+Para probar cosas nuevas y añadir funciones sin que afecte al trabajo.
+¿Cómo se crea una branch?
+git branch nombre de la rama
+¿Cómo se cambia a una branch?
+git checkout nombre de la rama
+¿Cómo se elimina una branch?
+git branch -d nombre de la rama
+¿Cómo se crea una branch y se cambia a ella en un solo paso?
+git checkout -b nombre de la rama
+¿Qué es un merge?
+Es juntar los cambios de una rama con otra.
+¿Cómo se realiza un merge?
+Primero cambias a la rama principal y luego haces git merge nombre de la rama
+¿Que es un tag?
+Es una etiqueta que marca un punto importante.
+¿Cómo se crea un tag?
+git tag nombre del tag
