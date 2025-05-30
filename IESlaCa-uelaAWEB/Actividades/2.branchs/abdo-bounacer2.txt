@@ -1,0 +1,77 @@
+2.1. Preguntas
+
+1. ¿Qué es un branch?
+ Una rama donde puedes trabajar sin afectar el resto del proyecto.
+
+2. ¿Por qué pueden ser útiles los branches?
+ Sirve para probar cosas o agregar funciones evitando cualquier tipo de fallo.
+
+3. ¿Cómo se crea una branch?
+ git branch nombre-de-la-rama
+
+4. ¿Cómo se cambia a una branch?
+ git checkout nombre-de-la-rama
+
+5. ¿Cómo se elimina una branch?
+ git branch -d nombre-de-la-rama
+
+6. ¿Cómo se crea una branch y se cambia a ella en un solo paso?
+ git checkout -b nombre-de-la-rama
+
+7. ¿Qué es un merge?
+ Es juntar los cambios de una rama con otra.
+
+8. ¿Cómo se realiza un merge?
+ Primero se cambia a la rama principal y luego haces un git merge nombre-de-la-rama
+
+9. ¿Que es un tag?
+ Es una etiqueta que marca un punto importante, como una versión.
+
+10. ¿Cómo se crea un tag?
+ git tag nombre-del-tag
+
+2.2. Ejercicio Práctico
+
+10.Correr el comando git graph y observar el resultado. ¿Qué observa?
+
+Que en la rama de experimento han habido cambios y en la main no.
+
+13.Correr el comando git graph y observar el resultado. ¿Qué observa?
+
+Los cambios se han hecho solo en la rama main.
+
+15.Correr el comando git graph y observar el resultado. ¿Qué observa?
+
+La rama anana no existe.
+
+16.¿Qué branches están "mergeadas" a master? (Puede usar el comando git branch --merged).
+
+Ninguna aparaece solo main que es la master.
+
+18.Correr el comando git graph y observar el resultado. ¿Qué observa?
+
+Los commits que antes aparecian sueltos ahora estan juntos.
+
+19.¿Tuvo que hacer un merge manual, o git lo hizo automáticamente? ¿Por qué?
+
+Manual. Para asi poder tener hacer pruebas en otras ramas sin poder afectar negativamente a la principal.
+
+20.¿Qué branches están "mergeadas" a master? (Puede usar el comando git branch --merged).
+
+Aparecen main y experimento.
+
+23.¿Qué branches están "mergeadas" a master? (Puede usar el comando git branch --merged).
+
+main.
+
+24.Correr el comando git graph y observar el resultado. ¿Qué observa?
+
+En antes al lado de cada mensaje de los commits aparecia la rama, ahora experimento ya no aparece.
+
+26.Ver los tags creados. (Puede usar el comando git tag).
+
+Aparece solo pizza.
+
+27.Ver el tag pizza. (Puede usar el comando git show pizza).
+
+Aparece quien lo ha creado y la fecha y hora de cuando.

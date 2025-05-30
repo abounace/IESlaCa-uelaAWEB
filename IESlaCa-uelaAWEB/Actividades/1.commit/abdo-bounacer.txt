@@ -1,0 +1,222 @@
+1.1. Preguntas
+
+1. ¿Cómo se inicializa un repositorio local? (que comando se debe ejecutar?)
+   Ejecuta git init
+
+2. ¿Cómo hago para que un directorio deje de ser controlado por git? (que comando se debe ejecutar?)
+   Con git rm --cached -r <directorio> y agrégalo a .gitignore si no quieres que vuelva a ser trackeado.
+
+3. Si agrego un archivo a un directorio que ya está siendo controlado por git, ¿está siendo controlado por git?
+   No, solo está en el sistema de archivos; necesitas añadirlo con git add.
+
+4. ¿Qué comando se utiliza para agregar un archivo al repositorio local?
+   Ejecuta git add <archivo>.
+
+5. ¿Cómo determino que archivos fueron modificados? (que comando se debe ejecutar?)
+   Usa git status o git diff.
+
+6. ¿Qué comando se utiliza para hacer un commit?
+   Ejecuta git commit -m "mensaje del commit".
+
+7. En sus propias palabras, ¿qué es un commit?
+   Es un registro permanente de los cambios en el repositorio.
+
+1.2. Ejercicio Práctico
+
+On branch main --Branch en el que estoy haciendo los cambios
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits) -- Los cambios que estoy haciendo estan por delante de los que se encuentran en el repositorio
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sandwich.txt -- Cambios que aun no he confirmado
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+5.Explique que cambio en la salida del comando git status luego de ejecutar el comando git add sandwich.txt.
+
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   sandwich.txt--
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   abdo-bounacer.txt
+
+El archivo sandwich.txt esta listo para hacerle commit y luego push
+
+7.Explique que cambio en la salida del comando git status luego de ejecutar el comando git commit -m "Agrego mi sandwich.txt".
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   abdo-bounacer.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sandwich.txt ya no aparece para hacerle commit ya que ahora esta listo para hacer git push y que aparezca en el repositorio
+
+9.Escriba la salida del comando git log en el archivo nombre_apellido.txt. Y explique que significa. ¿En qué orden aparecen los commits?
+
+commit 2169cdacbdf352d02f0b823b7dd4ced0eac1a44f (HEAD -> main)
+Author: abounace <abdobounacer5@gmail.com>
+Date:   Thu May 29 16:42:00 2025 +0200
+
+    Agrego mi sandwich.txt
+
+commit d94791c5fc6040ac4ee90a2d06631a689f838d9f
+Author: abounace <abdobounacer5@gmail.com>
+Date:   Thu May 29 16:16:29 2025 +0200
+
+    Ejercicios Teoricos
+
+commit 98666df3de233541237d55de82a11068c1ae34a7 (origin/main, origin/HEAD)
+Author: Lidia-lcm <lidialacalm@gmail.com>
+Date:   Tue May 20 13:50:12 2025 +0200
+
+    Update README.md
+
+commit 34ce0fa8f49eb4def8ee162ef152c0ad2510e9ab
+Author: Lidia-lcm <lidialacalm@gmail.com>
+Date:   Tue May 20 13:49:17 2025 +0200
+
+    Update README.md
+
+commit 27ae2d4633df71d57f8caf6eba02df8e94cf9d91
+Author: Lidia-lcm <lidialacalm@gmail.com>
+Date:   Mon May 12 12:23:35 2025 +0200
+
+    Update README.md
+
+Aparece un historial de commits y quien los ha hecho
+
+10.Pruebe las variaciones del comando git log y explique que observa en cada una de ellas. 10.1. git log --oneline 10.2. git log --stat
+
+10.1
+
+330677d (HEAD -> main) Agrego salsas
+2169cda Agrego mi sandwich.txt
+d94791c Ejercicios Teoricos
+98666df (origin/main, origin/HEAD) Update README.md
+34ce0fa Update README.md
+27ae2d4 Update README.md
+f6afc25 Add files via upload
+9d8e0e2 Delete tallergitprog1-main directory
+88fecc1 Add files via upload
+3a7d285 Update estilos
+dac6aed Rename estilos.md to estilos
+b15c251 Update estilos.md
+4327ba9 Update and rename archivo_1.md to estilos.md
+67da0bb Create archivo_1.md
+167f211 Merge pull request #1 from Lidia-lcm/rama-local
+ddcaf01 (origin/rama-local) Creacion de carpeta y subida de imagen
+175fc71 Update README.md
+7103b6a Initial commit
+
+Aparece el historial de los commits mas resumido y sin quien los ha hecho
+
+10.2
+
+commit 330677df1c617f0e7967171b3c499bef5afa329a (HEAD -> main)
+Author: abounace <abdobounacer5@gmail.com>
+Date:   Thu May 29 16:52:53 2025 +0200
+
+    Agrego salsas
+
+ Actividades/1.commit/sandwich.txt | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+commit 2169cdacbdf352d02f0b823b7dd4ced0eac1a44f
+Author: abounace <abdobounacer5@gmail.com>
+Date:   Thu May 29 16:42:00 2025 +0200
+
+    Agrego mi sandwich.txt
+
+ Actividades/1.commit/sandwich.txt | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+commit d94791c5fc6040ac4ee90a2d06631a689f838d9f
+Author: abounace <abdobounacer5@gmail.com>
+Date:   Thu May 29 16:16:29 2025 +0200
+
+    Ejercicios Teoricos
+
+ Actividades/1.commit/abdo-bounacer.txt     | 22 +++++++++++++++++++++
+ Actividades/2.branchs/abdo-bounacer2.txt   | 31 ++++++++++++++++++++++++++++++
+ Actividades/3.conflicts/abdo-bounacer3.txt |  7 +++++++
+ 3 files changed, 60 insertions(+)
+
+Aprece un historial de commits quien los ha hecho y cuantos carecteres han cambiado
+
+11. Inspeccione diferencias entre los commits, use el comando git diff y explique que significa cada uno de los resultados.
+11.1. En Windows, pruebe git difftool --tool=meld <hash> 11.2. En Linux, pruebe git difftool --tool=opendiff <hash>
+diff --git a/Actividades/1.commit/abdo-bounacer.txt b/Actividades/1.commit/abdo-bounacer.txt
+index 1dc87f3..3f4a3ec 100644
+--- a/Actividades/1.commit/abdo-bounacer.txt
++++ b/Actividades/1.commit/abdo-bounacer.txt
+@@ -19,4 +19,140 @@
+    Ejecuta git commit -m "mensaje del commit".
+
+ 7. En sus propias palabras, ¿qué es un commit?
+-   Es un registro permanente de los cambios en el repositorio.
+\ No newline at end of file
++   Es un registro permanente de los cambios en el repositorio.
++
++1.2. Ejercicio Práctico
++
++On branch main --Branch en el que estoy haciendo los cambios
++Your branch is ahead of 'origin/main' by 1 commit.
++  (use "git push" to publish your local commits) -- Los cambios que estoy haciendo estan por delante de los que se encuentran en el repositorio
++
++Changes not staged for commit:
++  (use "git add <file>..." to update what will be committed)
++  (use "git restore <file>..." to discard changes in working directory)
++        modified:   sandwich.txt -- Cambios que aun no he confirmado
++
++no changes added to commit (use "git add" and/or "git commit -a")
++
++5.Explique que cambio en la salida del comando git status luego de ejecutar el comando git add sandwich.txt.
++
++On branch main
+
+Aparece que cambia con cada commit en los documentos
+
+11.1
+Cuando copio y pego el comando git difftool --tool=meld <hash> me aparece que la sintaxis del comando no es correcta
+
+14.
+
+99f7845 (HEAD -> main) Agrego sandwich2 y le cambio el nombre a sandwich2_feo
+330677d Agrego salsas
+2169cda Agrego mi sandwich.txt
+d94791c Ejercicios Teoricos
+98666df (origin/main, origin/HEAD) Update README.md
+34ce0fa Update README.md
+27ae2d4 Update README.md
+f6afc25 Add files via upload
+9d8e0e2 Delete tallergitprog1-main directory
+88fecc1 Add files via upload
+3a7d285 Update estilos
+dac6aed Rename estilos.md to estilos
+b15c251 Update estilos.md
+4327ba9 Update and rename archivo_1.md to estilos.md
+67da0bb Create archivo_1.md
+167f211 Merge pull request #1 from Lidia-lcm/rama-local
+ddcaf01 (origin/rama-local) Creacion de carpeta y subida de imagen
+175fc71 Update README.md
+7103b6a Initial commit
+
+Aparece el ultimo commit que he hecho
+
+16. 
+
+Aparecen los ultimos commits que he hecho, la fecha y quien los ha hecho, el mensaje de cada uno y que archivos se han actualizado

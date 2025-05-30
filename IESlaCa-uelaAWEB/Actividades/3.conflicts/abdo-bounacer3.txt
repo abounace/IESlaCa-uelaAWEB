@@ -1,0 +1,46 @@
+3.1. Preguntas
+
+1. ¿Qué es un conflicto? Cuando ocurre? ¿Es bueno o malo?
+ Un conflicto es cuando Git no sabe que cambios elegir porque dos ramas tocaron lo mismo; pasa al hacer merge y no es del todo malo, pero hay que resolverlo para evitar problemas con el trabajo.
+
+2. ¿Se puede evitar un conflicto? ¿Cómo?
+ Se puede evitar si se trabaja en distintas partes del código y se hace git pull frecuentemente para estar actualizado.
+
+3.2. Ejercicio Práctico
+
+10. Haga un git diff master suprema y un git diff master bife. ¿Qué observa?
+
+Aparece que se ha eliminado y que se ha añadido en cada archivo.
+
+11. Moverse a la branch master. Corra un git status, ¿qué observa?
+
+Aparece que estoy por delante por 8 commits y que el archivo con mi nombre no se le puede hacer commit.
+
+12. Ejecute git merge bife. Funcionó?
+
+Si.
+
+13. Ejecute git merge suprema. Funcionó?
+
+No.
+
+14. Ejecute git status. Que observa?
+
+Lo mismo que en la pregunta 11 pero con 9 commits por delante.
+
+15. Vea el contenido del archivo 3.conflicts/milanesa.txt. ¿Qué observa?
+
+Aparece pan rallado y debajo bife porque he hecho primero merge con la rama bife
+
+17. Vuelva a ejecutar git merge suprema.
+
+Aparece esto:
+
+error: Your local changes to the following files would be overwritten by merge:
+        Actividades/3.conflicts/abdo-bounacer3.txt
+Please commit your changes or stash them before you merge.
+Aborting
+Merge with strategy ort failed.
+
+18. Resuelva el conflicto manualmente.
+He ido a la rama suprema y he cambiado pollo por bife en milanesa.txt luego he hecho un commit, he cambiado a  main y vuelto a hacer el merge.
